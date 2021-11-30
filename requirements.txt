@@ -1,3 +1,4 @@
 numpy==1.21.4
 opencv_python==4.2.0.34
 streamlit==0.86.0
+streamlit-webcam-example==0.1.0
