@@ -9,7 +9,7 @@ def main():
 
     selected_box = st.sidebar.selectbox(
     'Escolha as seguintes opções',
-    ('Welcome','Segmentar cor', 'Detectar Face', 'Cartoon')
+    ('Welcome','Segmentar cor', 'Cartoon')
     )
 
     if selected_box == 'Welcome':
