@@ -16,8 +16,6 @@ def main():
         welcome() 
     if selected_box == 'Segmentar cor':
         seg_color()
-    if selected_box == 'Detectar Face':
-        face_detection()
     if selected_box == 'Cartoon':
         cartoon()
 
@@ -30,11 +28,7 @@ def welcome():
     st.write(' Escolha no menu Lateral qual ferramenta usar:')
     st.write('1) Welcome')
     st.write('2) Segmentar Cor')
-    st.write('3) Detectar Face')
-    st.write('4) Cartoon')
-    
-    # Colocar a logo do IF ou da semana da engenharia
-    # st.image('hackershrine.jpg',use_column_width=True)
+    st.write('3) Cartoon')
 
 
 def seg_color():
@@ -61,36 +55,7 @@ def seg_color():
     else:
         st.write('Sem Acesso a Camera')
 
-def face_detection():
-    st.title("Detectar Face")
 
-    folder_cascade = os.path.join(os.getcwd(), 'Haarcascades')
-
-    cascade = cv2.CascadeClassifier(folder_cascade + 
-    r'\haarcascade_frontalface_default.xml')
-
-    run = st.checkbox('Run')
-    FRAME_WINDOW = st.image([])
-
-    cam = cv2.VideoCapture(0)  
-    
-    while run:        
-        ret, frame = cam.read()
-        faces = cascade.detectMultiScale(frame,
-                                        scaleFactor=1.4,
-                                        minNeighbors=5,
-                                        minSize=(30, 30)
-                                        )
-
-        for (x, y, w, h) in faces:
-
-            cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
-
-        frame_RGB = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-        
-        FRAME_WINDOW.image(frame_RGB)
-    else:
-        st.write('Sem Acesso a Camera')
 
 def cartoon():
     st.title("Cartoon")
