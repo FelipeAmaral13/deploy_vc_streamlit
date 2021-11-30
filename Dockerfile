@@ -11,7 +11,7 @@ RUN python3 -m pip install -r /tmp/requirements.txt
 
 EXPOSE 8501
 
-COPY ./app .
+COPY . .
 
 ENTRYPOINT ["streamlit", "run"]
 CMD ["app.py"]
