@@ -1,12 +1,11 @@
-# VIII SEMANA DA ENGENHARIA
+# MasterClass Udemy
 
-O objetivo desse mini-curso é fazer um sistema de deploy com visão computacional utilizando python.
+O objetivo dessa mastercalss é fazer um sistema de deploy com visão computacional utilizando python.
 
 ### Deploy:
 
 - Welcome
 - Segmentação de cor
-- Detecção de Face
 - Cartoon 
 
 
